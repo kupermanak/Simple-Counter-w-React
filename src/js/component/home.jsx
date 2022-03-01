@@ -1,26 +1,13 @@
 import React from "react";
+import propTypes from "prop-types";
 
-//include images into your bundle
-import rigoImage from "../../img/rigo-baby.jpg";
+const estilosH1 = {};
 
-//create your first component
-const Home = () => {
-	return (
-		<div>
-			<h1 className="text-center mt-5">Hello Rigo!</h1>
-			<p>
-				<img src={rigoImage} />
-			</p>
-			<a href="#" className="btn btn-success">
-				If you see this green button... bootstrap is working...
-			</a>
-			<p>
-				Made by{" "}
-				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
-				love!
-			</p>
-		</div>
-	);
+const Home = (props) => {
+	return <div>{props.numSec}</div>;
 };
 
+Home.propTypes = {
+	numSec: propTypes.number,
+};
 export default Home;
